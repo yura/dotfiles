@@ -1,0 +1,7 @@
+[user]
+	name = Yury Kotlyarov
+	email = yura@brainhouse.ru
+[core]
+	editor = vi
+[push]
+	default = matching
