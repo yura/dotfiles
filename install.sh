@@ -17,4 +17,5 @@ for file in $files; do
 
   echo "Symlinking $file in home directory"
   ln -s $dir/$file ~/.$file
+  source ~/.$file
 done
