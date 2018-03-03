@@ -11,11 +11,15 @@ echo "Creating backup dir $olddir"
 mkdir -p $olddir 
 
 for file in $files; do
-  if [ -f ~/$file ]; then
+  echo "Checking .$file ..."
+  if [ -f ~/.$file ]; then
+    echo "  moving .$file"
     mv ~/.$file $olddir
+  else
+    echo "  not found"
   fi
 
   echo "Symlinking $file in home directory"
-  ln -s $dir/$file ~/.$file
+  ln -sf $dir/$file ~/.$file
 done
 source ~/.bash_aliases
