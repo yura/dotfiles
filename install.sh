@@ -5,7 +5,7 @@
 
 dir=`pwd`
 olddir=~/dotfiles.old
-files=`ls -I "README*" -I "*.sh"`
+files=`ls | grep -v README | grep -v *.sh`
 
 echo "Creating backup dir $olddir"
 mkdir -p $olddir 
