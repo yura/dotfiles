@@ -1,5 +1,9 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set number
+set nocompatible      " We're running Vim, not Vi!
+syntax on             " Enable syntax highlighting
+filetype on           " Enable filetype detection
+filetype indent on    " Enable filetype-specific indenting
+filetype plugin on    " Enable filetype-specific plugins
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -13,7 +17,10 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
+Plugin 'slim-template/vim-slim.git'
 Plugin 'tpope/vim-fugitive'
 Plugin 'onerobotics/vim-karel'
 Plugin 'onerobotics/vim-tp'
@@ -21,6 +28,7 @@ Plugin 'onerobotics/vim-tp'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+autocmd BufNewFile,BufRead *.slim setlocal filetype=slim
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
