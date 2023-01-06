@@ -1,9 +1,11 @@
 [user]
-	name = Yury Kotlyarov
-	email = yura@brainhouse.ru
+        name = Yuriy Kotlyarov
+        email = yury.kotlyarov@gmail.com
 [core]
-	editor = vi
-[push]
-	default = matching
+        # https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration#_formatting_and_whitespace
+        autocrlf = input
+        editor = vim
+[init]
+        defaultBranch = main
 [color]
-	ui = true
+        ui = auto
